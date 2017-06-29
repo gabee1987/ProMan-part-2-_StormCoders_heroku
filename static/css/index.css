@@ -1,0 +1,235 @@
+/* CSS for ProMan index page
+    by StormCoders
+*/
+
+
+/* 
+==========================================================================
+Globals
+==========================================================================
+*/
+
+html {
+	box-sizing: border-box;
+    background: fixed;
+    background-color: #f3faff;
+}
+
+body {
+	box-sizing: border-box;
+	font-family: "Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background: fixed;
+}
+    
+
+/* 
+==========================================================================
+Header
+==========================================================================
+*/
+
+
+.jumbotron {
+	/*background-color: #00bcd4;*/
+	background-image: url('/static/img/material_bg.jpg');
+	background-attachment: fixed;
+    height: 250px;
+    -webkit-font-smoothing: antialiased;
+    margin: -20px auto;
+    padding: 1.5%;
+    box-sizing: border-box;
+}
+
+#jumbotron-fadOut {
+	background-color:#000;
+	opacity:0.0;
+}
+
+#addBootCard {
+	color: black;
+}
+
+.page-header {
+	margin: 5em auto;
+}
+
+#page-title {
+	margin-top: 0em;
+}
+
+h1 {
+	font-size: 4em;
+}
+
+h2 {
+	font-size: 3em;
+	color: black;
+}
+
+
+
+/* 
+==========================================================================
+Navbar
+==========================================================================
+*/
+
+
+.navbar {
+	-webkit-font-smoothing: antialiased;
+    border-radius: 0;
+	margin-bottom: 2em;
+	box-shadow: 0px 2px 2px #8c8c8c;
+	/*border-bottom: 1px solid #636363; */
+}
+.navbar img {
+}
+
+#BoardForm {
+	border: none;
+}
+
+#BoardForm:hover {
+	cursor: pointer;
+}
+
+/* 
+==========================================================================
+Boards
+==========================================================================
+*/
+
+.task-template {
+    display:none;
+}
+.task-template:nth-child(-n+3) {
+    display:block;
+}
+
+
+
+.card-title {
+	color: black;
+	margin-top: -20px;
+	margin-left: -20px;
+	margin-right: -20px;
+	margin-bottom: 20px;
+}
+
+
+#viewBoard {
+	font-size: 1.2em;
+}
+
+#deleteBoard {
+	background-color: #d95254;
+	border-color: #d95254;
+	margin-left: 2em;
+}
+
+.btn .btn-primary .btn-sm {
+	background-color: #00b8d0;
+}
+
+
+
+/* 
+==========================================================================
+Board 'cards'
+==========================================================================
+*/
+
+.card {
+	display: inline-block;
+	min-width: 230px;
+	max-width: 350px;
+	width: 230px;
+    background-color: #FAFAFA;
+    box-shadow: 0px 2px 8px #888888;
+    border-radius: 4px;
+	border: #ebebeb;
+	border-width: 0.5px;
+}
+
+.card a {
+	color: black;
+	background-color: #00b8d0;
+	border-color: #00b8d0;
+}
+
+.card-deck {
+	padding-left: 1.3em;
+	padding-right: 1.3em;
+}
+.card-title {
+	overflow: hidden;
+	margin-top: -19px;
+	margin-left: -19px;
+	margin-right: -19px;
+    background-color: #00b8d0;
+    padding: 10px;
+	border-inline-end-width: 1px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.list-group .list-group-flush {
+	margin: 2px;
+}
+
+.list-group-item {
+	padding: 5px;
+	font-size: 1.1em;
+	border-radius: 5px;
+	background-color: #f5f5f5;
+}
+
+.card-footer {
+	padding: 10px 20px;
+	font-size: 1.3em;
+	background-color: #e5e5e5;
+}
+
+
+#alert-main {
+	text-align: center;
+	font-size: 1.5em;
+	color: #F44336;
+}
+
+
+
+.modal-title {
+	font-size: 2em;
+	color: #black;
+}
+
+.modal-header {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	background-color: #51bab6;
+}
+
+
+
+/* 
+==========================================================================
+Cards(tasks)
+==========================================================================
+*/
+
+
+.card > mb-3 {
+	height: 200px;
+}
+
+
+#add-card-button {
+	cursor: pointer;
+	border: none;
+}
+
+.task  {
+	background-color: #65b38c;
+}
