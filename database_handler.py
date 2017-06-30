@@ -1,5 +1,4 @@
 import psycopg2
-from local_config import *
 
 
 def connect_db(connect_data):
