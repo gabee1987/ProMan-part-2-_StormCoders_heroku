@@ -4,8 +4,6 @@ import psycopg2
 def connect_db(connect_data):
 
     conn = None
-    urllib.parse.uses_netloc.append('postgres')
-    url = urllib.parse.urlparse(os.environ.get('DATABASE_URL'))
     try:
         conn = psycopg2.connect(**connect_data)
         return conn
@@ -16,6 +14,8 @@ def connect_db(connect_data):
 
 def handle_database(query, query_variables=None):
     result = {}
+    urllib.parse.uses_netloc.append('postgres')
+    url = urllib.parse.urlparse(os.environ.get('DATABASE_URL'))
     connect_data = {
                     'database': url.path[1:],
                     'user': url.username,
