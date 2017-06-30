@@ -5,8 +5,10 @@ from local_config import *
 def connect_db(connect_data):
 
     conn = None
+    urllib.parse.uses_netloc.append('postgres')
+    url = urllib.parse.urlparse(os.environ.get('DATABASE_URL'))
     try:
-        conn = psycopg2.connect(connect_data)
+        conn = psycopg2.connect(**connect_data)
         return conn
     except:
         result = 'Could not connect to database'
@@ -15,7 +17,13 @@ def connect_db(connect_data):
 
 def handle_database(query, query_variables=None):
     result = {}
-    connect_data = "dbname={0} user={1} password={2} host={3}".format(DATABASE, USER, PASSWORD, HOST)
+    connect_data = {
+                    'database': url.path[1:],
+                    'user': url.username,
+                    'password': url.password,
+                    'host': url.hostname,
+                    'port': url.port
+                    }
     connection = connect_db(connect_data)
 
     # check if connect_db function returnd with the message: connection error

@@ -80,5 +80,4 @@ def get_cards():
     return datas_in_json
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
