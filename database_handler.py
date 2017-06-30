@@ -1,4 +1,6 @@
 import psycopg2
+import urllib
+import os
 
 
 def connect_db(connect_data):
